@@ -1,8 +1,8 @@
 # Ujian Akhir Semester 
 <br>Mata Kuliah 	: Dasar Pemrograman
 <br> Nama		: Muhammad Saifurridwani 'Ijazi
-<br>NIM		:	1227050094
-<br>Jurusan		:[Teknik Informatika](http://if.uinsgd.ac.id/) [UIN Sunan Gunung Djati Bandung](https://uinsgd.ac.id/) 
+<br>NIM			: 1227050094
+<br>Jurusan		: [Teknik Informatika](http://if.uinsgd.ac.id/) [UIN Sunan Gunung Djati Bandung](https://uinsgd.ac.id/) 
 
 ## Deskripsi Umum
 <br>Pada program kali ini dibuat untuk memenuhi Ujian Akhir Semester(UAS) mata kuliah Dasar Pemrograman, pada program ini terdapat 2 soal yaitu:
@@ -11,107 +11,106 @@
 <br>2. Menampilkan bilangan yang habis dibagi 3, 5 dan 7
 <br> Pada program ini kita akan mengecek bilangan yang diinputkan apakah bisa dibagi dengan bilangan 3, 5, 7 atau tidak
 ## Source Code
-<br>#include <iostream>
-<br>using namespace std;
+	#include <iostream>
+	using namespace std;
 
-<br>int main()
-<br>{
-	<br>int m, n;
+	int main()
+	{
+		int m, n;
 	
-	cout << "UAS"<<endl;
-	cout << "===="<<endl;
-	cout << "Nama : Muhammad Saifurridwani 'Ijazi"<<endl;
-	cout << "NIM  : 1227050094"<<endl;
-	cout << "======================================"<<endl<<endl<<endl;
+		cout << "UAS"<<endl;
+		cout << "===="<<endl;
+		cout << "Nama : Muhammad Saifurridwani 'Ijazi"<<endl;
+		cout << "NIM  : 1227050094"<<endl;
+		cout << "======================================"<<endl<<endl<<endl;
 
-	cout << "No.1 Mengubah baris jadi kolom dan kolom jadi baris (transpose)" << endl;
-	cout << "==============================================================="<<endl;
-	cout << "Masukkan jumlah baris matriks: ";
-	cin >> m;
-	cout << "Masukkan jumlah kolom matriks: ";
-	cin >> n;
-	
-	int matriks[m][n], transpose[n][m];
-	
-	cout << "Masukkan Nilai-Nilai Matriks\n";
-	for (int i = 0; i < m; i++)
-	{
-    	for (int j = 0; j < n; j++)
-		{
-    		cout <<"Baris ke "<<i+1<<", Kolom ke "<<j+1<<" : ";
-			cin  >> matriks[i][j];
-		}
-	}
+		cout << "No.1 Mengubah baris jadi kolom dan kolom jadi baris (transpose)" << endl;
+		cout << "==============================================================="<<endl;
+		cout << "Masukkan jumlah baris matriks: ";
+		cin >> m;
+		cout << "Masukkan jumlah kolom matriks: ";
+		cin >> n;
 
-	cout << "Hasil dari matriks yang diinputkan :\n";
-	for (int i = 0; i < m; i++)
-	{
-    	for (int j = 0; j < n; j++)
-		{
-    		cout << matriks[i][j] << "\t";
-    	}
-    	cout << endl;
-  	}
-	cout << endl;
+		int matriks[m][n], transpose[n][m];
 
-	for (int i = 0; i < m; i++)
-	{
-    	for (int j = 0; j < n; j++)
+		cout << "Masukkan Nilai-Nilai Matriks\n";
+		for (int i = 0; i < m; i++)
 		{
-      		transpose[j][i] = matriks[i][j];
-    	}
-	}
-
-	cout << "Hasil Transpose Matriks: \n";
-	for (int i = 0; i < n; i++)
-	{
-    	for (int j = 0; j < m; j++)
-		{
-			cout << transpose[i][j] << "\t";
-    	}
-    	cout << endl;
-	}
-	cout <<endl;
-  
-	//buat pada array 2 dimensi angka-angka, menampilkan bilangan yang habis dibagi 3, 5, dan 7  
-  	cout << "No.2 Menampilkan bilangan yang habis dibagi 3, 5 dan 7" << endl;
-	cout << "==============================================================="<<endl;
-	cout << "Masukkan jumlah baris matriks: ";
-	cin >> m;
-	cout << "Masukkan jumlah kolom matriks: ";
-	cin >> n;
-	
-	cout << "Masukkan Nilai-Nilai\n";
-	for (int i = 0; i < m; i++)
-	{
-    	for (int j = 0; j < n; j++)
-		{
-    		cout <<"("<<i+1<<","<<j+1<<") : ";
-			cin  >> matriks[i][j];
-		}
-	}
-	cout << endl;
-	
-	bool cek = true;
-	cout << "Nilai yang bisa dibagi 3, 5, 7 yaitu :";
-	for (int i = 0; i < m; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			if (matriks[i][j]%3==0 && matriks[i][j]%5==0 && matriks[i][j]%7==0)
+			for (int j = 0; j < n; j++)
 			{
-				cout << " " << matriks[i][j];
-				cout << endl;
-				cek = false;
+				cout <<"Baris ke "<<i+1<<", Kolom ke "<<j+1<<" : ";
+				cin  >> matriks[i][j];
 			}
 		}
+
+		cout << "Hasil dari matriks yang diinputkan :\n";
+		for (int i = 0; i < m; i++)
+		{
+			for (int j = 0; j < n; j++)
+			{
+				cout << matriks[i][j] << "\t";
+			}
+			cout << endl;
+		}
+		cout << endl;
+
+		for (int i = 0; i < m; i++)
+		{
+			for (int j = 0; j < n; j++)
+			{
+				transpose[j][i] = matriks[i][j];
+			}
+		}
+
+		cout << "Hasil Transpose Matriks: \n";
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = 0; j < m; j++)
+			{
+				cout << transpose[i][j] << "\t";
+			}
+			cout << endl;
+		}
+		cout <<endl;
+
+		cout << "No.2 Menampilkan bilangan yang habis dibagi 3, 5 dan 7" << endl;
+		cout << "==============================================================="<<endl;
+		cout << "Masukkan jumlah baris matriks: ";
+		cin >> m;
+		cout << "Masukkan jumlah kolom matriks: ";
+		cin >> n;
+
+		cout << "Masukkan Nilai-Nilai\n";
+		for (int i = 0; i < m; i++)
+		{
+			for (int j = 0; j < n; j++)
+			{
+				cout <<"("<<i+1<<","<<j+1<<") : ";
+				cin  >> matriks[i][j];
+			}
+		}
+		cout << endl;
+
+		bool cek = true;
+		cout << "Nilai yang bisa dibagi 3, 5, 7 yaitu :";
+		for (int i = 0; i < m; i++)
+		{
+			for (int j = 0; j < n; j++)
+			{
+				if (matriks[i][j]%3==0 && matriks[i][j]%5==0 && matriks[i][j]%7==0)
+				{
+					cout << " " << matriks[i][j];
+					cout << endl;
+					cek = false;
+				}
+			}
+		}
+		if (cek)
+		{
+			cout << " Nilai yang anda input tidak bisa dibagi 3, 5 dan 7" <<endl;
+		}
+		return 0;
 	}
-	if (cek)
-	{
-		cout << " Nilai yang anda input tidak bisa dibagi 3, 5 dan 7" <<endl;
-	}
-	return 0;
-<br>}
 
 ## Output
 <br>UAS
